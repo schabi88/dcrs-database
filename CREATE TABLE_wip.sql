@@ -361,6 +361,94 @@ FOREIGN KEY (secondary_ema_id) REFERENCES ChemComp(ema_id)
 );
 ------------------------------------------
 
+--------------Ink-ChemComp--------------
+CREATE TABLE Ink-ChemComp
+(
+primary_ema_id INTEGER NOT NULL UNIQUE,
+secondary_ema_id INTEGER NOT NULL UNIQUE,
+weight_percentage FLOAT NOT NULL,
+comment LONGTEXT,
+
+PRIMARY KEY(primary_ema_id, secondary_ema_id),
+FOREIGN KEY (primary_ema_id) REFERENCES Ink(ema_id),
+FOREIGN KEY (secondary_ema_id) REFERENCES ChemComp(ema_id)
+);
+------------------------------------------
+
+--------------Supplier-ChemComp--------------
+CREATE TABLE Supplier-ChemComp
+(
+supplier_id INTEGER NOT NULL UNIQUE,
+ema_id INTEGER NOT NULL UNIQUE,
+comment LONGTEXT,
+
+PRIMARY KEY(supplier_id, ema_id),
+FOREIGN KEY (supplier_id) REFERENCES Supplier(supplier_id),
+FOREIGN KEY (ema_id) REFERENCES ChemComp(ema_id)
+);
+------------------------------------------
+
+--------------Hphrase-ChemComp--------------
+CREATE TABLE HPhrase-ChemComp
+(
+hphrase_id INTEGER NOT NULL,
+ema_id INTEGER NOT NULL,
+comment LONGTEXT,
+
+PRIMARY KEY(hphrase_id, ema_id),
+FOREIGN KEY (hphrase_id) REFERENCES Hphrase(id),
+FOREIGN KEY (ema_id) REFERENCES ChemComp(ema_id)
+);
+------------------------------------------
+
+--------------DesignStatus-Ink--------------
+CREATE TABLE DesignStatus-Ink
+(
+status_id INTEGER NOT NULL,
+ema_id INTEGER NOT NULL,
+entry_created_person_id INTEGER NOT NULL,
+last_edit_toxicologist_id INTEGER,
+last_edit_steward_id INTEGER,
+status LONGTEXT,
+current_situation LONGTEXT,
+impact LONGTEXT,
+next_steps LONGTEXT,
+supporting_data LONGTEXT,
+reference LONGTEXT,
+entry_created_time DATETIME,
+last_edit_steward_time DATETIME,
+last_edit_toxicologist_time DATETIME,
+
+PRIMARY KEY(status_id, ema_id),
+FOREIGN KEY (status_id) REFERENCES DesignStatus(id),
+FOREIGN KEY (ema_id) REFERENCES Ink(ema_id)
+);
+------------------------------------------
+
+--------------RegulationStatus-Ink--------------
+CREATE TABLE RegulationStatus-Ink
+(
+status_id INTEGER NOT NULL,
+ema_id INTEGER NOT NULL,
+entry_created_person_id INTEGER NOT NULL,
+last_edit_toxicologist_id INTEGER,
+last_edit_steward_id INTEGER,
+status LONGTEXT,
+current_situation LONGTEXT,
+impact LONGTEXT,
+next_steps LONGTEXT,
+supporting_data LONGTEXT,
+reference LONGTEXT,
+entry_created_time DATETIME,
+last_edit_steward_time DATETIME,
+last_edit_toxicologist_time DATETIME,
+
+PRIMARY KEY(status_id, ema_id),
+FOREIGN KEY (status_id) REFERENCES RegulationStatus(id),
+FOREIGN KEY (ema_id) REFERENCES Ink(ema_id)
+);
+------------------------------------------
+
 --------------INVENTORY TRACKING--------------
 -------------------------------------------------
 

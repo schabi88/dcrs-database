@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2936d2c9-891d-49c9-b5df-c24f5bdd9b27" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ChemScreenData_INSERT.sql" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/GreenScreenData_INSERT.sql" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/RegulatedMetal_INSERT.sql" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ChemScreenData_INSERT.sql" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CREATE TABLE_wip.sql" afterPath="$PROJECT_DIR$/CREATE TABLE_wip.sql" />
     </list>
     <ignored path="DCRS.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,8 +27,28 @@
       <file leaf-file-name="CREATE TABLE_wip.sql" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/CREATE TABLE_wip.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="523">
-              <caret line="548" column="31" selection-start-line="548" selection-start-column="31" selection-end-line="548" selection-end-column="31" />
+            <state relative-caret-position="1743">
+              <caret line="448" column="2" selection-start-line="448" selection-start-column="2" selection-end-line="448" selection-end-column="2" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RegulatedMetal_INSERT.sql" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/RegulatedMetal_INSERT.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="731">
+              <caret line="43" column="44" selection-start-line="43" selection-start-column="44" selection-end-line="43" selection-end-column="44" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GreenScreenData_INSERT.sql" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/GreenScreenData_INSERT.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -54,6 +73,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/test.sql" />
+        <option value="$PROJECT_DIR$/RegulatedMetal_INSERT.sql" />
+        <option value="$PROJECT_DIR$/CREATE TABLE_wip.sql" />
       </list>
     </option>
   </component>
@@ -62,6 +83,22 @@
     <option name="y" value="-8" />
     <option name="width" value="1696" />
     <option name="height" value="1026" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>Android</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -109,7 +146,7 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="preferences.editor" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
@@ -380,7 +417,21 @@
       <option name="project" value="LOCAL" />
       <updated>1471981422189</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="More INSERT files">
+      <created>1471981610701</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1471981610701</updated>
+    </task>
+    <task id="LOCAL-00003" summary="More INSERT files">
+      <created>1471981686322</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1471981686322</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -427,7 +478,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Test Commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Test Commit" />
+    <MESSAGE value="More INSERT files" />
+    <option name="LAST_COMMIT_MESSAGE" value="More INSERT files" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -454,10 +506,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/ChemScreenData_INSERT.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RegulatedMetal_INSERT.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="731">
+          <caret line="43" column="44" selection-start-line="43" selection-start-column="44" selection-end-line="43" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GreenScreenData_INSERT.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/CREATE TABLE_wip.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="523">
-          <caret line="548" column="31" selection-start-line="548" selection-start-column="31" selection-end-line="548" selection-end-column="31" />
+        <state relative-caret-position="1743">
+          <caret line="448" column="2" selection-start-line="448" selection-start-column="2" selection-end-line="448" selection-end-column="2" />
           <folding />
         </state>
       </provider>
