@@ -20,10 +20,10 @@ INSERT INTO RegulatedMetal(criteria_name, criteria_description, us_tlcp, ca_stlc
 VALUES('cr3', 'Chromium III (Cr III)', 5, 5, 2500, 0);
 
 INSERT INTO RegulatedMetal(criteria_name, criteria_description, us_tlcp, ca_stlc, ca_ttlc, dfe_limit)
-VALUES('cr6', 'Chromium VI (Cr VI)', 5, 5, 500, 0)
+VALUES('cr6', 'Chromium VI (Cr VI)', 5, 5, 500, 0);
 
 INSERT INTO RegulatedMetal(criteria_name, criteria_description, us_tlcp, ca_stlc, ca_ttlc, dfe_limit)
-VALUES('cu', 'Copper (Cu)', 0 , 25, 2500, 0");
+VALUES('cu', 'Copper (Cu)', 0 , 25, 2500, 0);
 
 INSERT INTO RegulatedMetal(criteria_name, criteria_description, us_tlcp, ca_stlc, ca_ttlc, dfe_limit)
 VALUES('hg', 'Mercury (Hg)', 0.2, 0.2, 20, 2);
