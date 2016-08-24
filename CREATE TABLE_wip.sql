@@ -39,7 +39,7 @@ secondary_synonym LONGTEXT,
 component_type LONGTEXT,
 formulation_type LONGTEXT,
 mixture_instructions LONGTEXT,
-chemical_formula LONGTEXT,
+chemical_formula CHAR(100),
 chemical_structure LONGTEXT,
 component_status LONGTEXT,
 obsolete_date DATETIME,
@@ -108,6 +108,9 @@ FOREIGN KEY (last_edit_steward_id) REFERENCES UserData(id)
 CREATE TABLE Ink
 (
 ema_id INTEGER NOT NULL,
+entry_created_person_id INTEGER,
+last_edit_toxicologist_id INTEGER,
+last_edit_steward_id INTEGER,
 name_code CHAR(255),
 target_market CHAR(255),
 content_water FLOAT,
@@ -120,7 +123,7 @@ solids_or_non_volatile CHAR(255),
 content_voc_swiss FLOAT,
 content_voc_rinko_american_research FLOAT,
 acquatic_toxicity FLOAT,
-is_dcrs BOOLEAN,
+is_dcrs BIT,
 entry_created_time DATETIME,
 last_edit_steward_time DATETIME,
 last_edit_toxicologist_time DATETIME,
@@ -129,8 +132,7 @@ comment LONGTEXT,
 PRIMARY KEY (ema_id),
 FOREIGN KEY (entry_created_person_id) REFERENCES UserData(id),
 FOREIGN KEY (last_edit_toxicologist_id) REFERENCES UserData(id),
-FOREIGN KEY (last_edit_steward_id) REFERENCES UserData(id),
-
+FOREIGN KEY (last_edit_steward_id) REFERENCES UserData(id)
 );
 ------------------------------------------
 
@@ -245,7 +247,7 @@ FOREIGN KEY(ema_id) REFERENCES ChemComp(ema_id)
 ------------------------------------------
 
 --------------GreenScreenStatus-ChemComp--------------
-CREATE TABLE ToxEndpointDataTest-ChemComp
+CREATE TABLE GreenScreenStatus_ChemComp
 (
 green_screen_status_id INTEGER NOT NULL,
 ema_id INTEGER NOT NULL,
@@ -263,13 +265,12 @@ FOREIGN KEY (green_screen_status_id) REFERENCES GreenScreenStatus(id),
 FOREIGN KEY (ema_id) REFERENCES ChemComp(ema_id),
 FOREIGN KEY (entry_created_person_id) REFERENCES UserData(id),
 FOREIGN KEY (last_edit_toxicologist_id) REFERENCES UserData(id),
-FOREIGN KEY (last_edit_steward_id) REFERENCES UserData(id),
+FOREIGN KEY (last_edit_steward_id) REFERENCES UserData(id)
 );
 ------------------------------------------
 
-
 --------------ToxEndpointDataTest-ChemComp--------------
-CREATE TABLE ToxEndpointDataTest-ChemComp
+CREATE TABLE ToxEndpointDataTest_ChemComp
 (
 test_data_id INTEGER NOT NULL,
 ema_id INTEGER NOT NULL,
@@ -291,12 +292,12 @@ FOREIGN KEY (test_data_id) REFERENCES ToxEndpointDataTest(id),
 FOREIGN KEY (ema_id) REFERENCES ChemComp(ema_id),
 FOREIGN KEY (entry_created_person_id) REFERENCES UserData(id),
 FOREIGN KEY (last_edit_toxicologist_id) REFERENCES UserData(id),
-FOREIGN KEY (last_edit_steward_id) REFERENCES UserData(id),
+FOREIGN KEY (last_edit_steward_id) REFERENCES UserData(id)
 );
 ------------------------------------------
 
---------------DangerSymbol-Ink--------------
-CREATE TABLE DangerSymbol-Ink
+--------------DangerSymbol_Ink--------------
+CREATE TABLE DangerSymbol_Ink
 (
 danger_symbol_id INTEGER NOT NULL,
 ema_id INTEGER NOT NULL,
@@ -309,7 +310,7 @@ FOREIGN KEY (ema_id) REFERENCES Ink(ema_id)
 ------------------------------------------
 
 --------------Product-Ink--------------
-CREATE TABLE Product-Ink
+CREATE TABLE Product_Ink
 (
 product_id INTEGER NOT NULL,
 ema_id INTEGER NOT NULL,
@@ -321,8 +322,8 @@ FOREIGN KEY (ema_id) REFERENCES Ink(ema_id)
 );
 ------------------------------------------
 
---------------RegulatedMetal-Ink--------------
-CREATE TABLE RegulatedMetal-Ink
+--------------RegulatedMetal_Ink--------------
+CREATE TABLE RegulatedMetal_Ink
 (
 regulated_metal_id INTEGER NOT NULL,
 ema_id INTEGER NOT NULL,
@@ -335,7 +336,7 @@ FOREIGN KEY (ema_id) REFERENCES Ink(ema_id)
 ------------------------------------------
 
 --------------Hphrase-Ink--------------
-CREATE TABLE HPhrase-Ink
+CREATE TABLE HPhrase_Ink
 (
 hphrase_id INTEGER NOT NULL,
 ema_id INTEGER NOT NULL,
@@ -348,10 +349,10 @@ FOREIGN KEY (ema_id) REFERENCES Ink(ema_id)
 ------------------------------------------
 
 --------------ChemComp-ChemComp--------------
-CREATE TABLE ChemComp-ChemComp
+CREATE TABLE ChemComp_ChemComp
 (
-primary_ema_id INTEGER NOT NULL UNIQUE,
-secondary_ema_id INTEGER NOT NULL UNIQUE,
+primary_ema_id INTEGER NOT NULL,
+secondary_ema_id INTEGER NOT NULL,
 weight_percentage FLOAT NOT NULL,
 comment LONGTEXT,
 
@@ -362,10 +363,10 @@ FOREIGN KEY (secondary_ema_id) REFERENCES ChemComp(ema_id)
 ------------------------------------------
 
 --------------Ink-ChemComp--------------
-CREATE TABLE Ink-ChemComp
+CREATE TABLE Ink_ChemComp
 (
-primary_ema_id INTEGER NOT NULL UNIQUE,
-secondary_ema_id INTEGER NOT NULL UNIQUE,
+primary_ema_id INTEGER NOT NULL,
+secondary_ema_id INTEGER NOT NULL,
 weight_percentage FLOAT NOT NULL,
 comment LONGTEXT,
 
@@ -376,20 +377,20 @@ FOREIGN KEY (secondary_ema_id) REFERENCES ChemComp(ema_id)
 ------------------------------------------
 
 --------------Supplier-ChemComp--------------
-CREATE TABLE Supplier-ChemComp
+CREATE TABLE Supplier_ChemComp
 (
-supplier_id INTEGER NOT NULL UNIQUE,
-ema_id INTEGER NOT NULL UNIQUE,
+supplier_id INTEGER NOT NULL,
+ema_id INTEGER NOT NULL,
 comment LONGTEXT,
 
 PRIMARY KEY(supplier_id, ema_id),
-FOREIGN KEY (supplier_id) REFERENCES Supplier(supplier_id),
+FOREIGN KEY (supplier_id) REFERENCES Supplier(id),
 FOREIGN KEY (ema_id) REFERENCES ChemComp(ema_id)
 );
 ------------------------------------------
 
 --------------Hphrase-ChemComp--------------
-CREATE TABLE HPhrase-ChemComp
+CREATE TABLE HPhrase_ChemComp
 (
 hphrase_id INTEGER NOT NULL,
 ema_id INTEGER NOT NULL,
@@ -402,7 +403,7 @@ FOREIGN KEY (ema_id) REFERENCES ChemComp(ema_id)
 ------------------------------------------
 
 --------------DesignStatus-Ink--------------
-CREATE TABLE DesignStatus-Ink
+CREATE TABLE DesignStatus_Ink
 (
 status_id INTEGER NOT NULL,
 ema_id INTEGER NOT NULL,
@@ -426,7 +427,7 @@ FOREIGN KEY (ema_id) REFERENCES Ink(ema_id)
 ------------------------------------------
 
 --------------RegulationStatus-Ink--------------
-CREATE TABLE RegulationStatus-Ink
+CREATE TABLE RegulationStatus_Ink
 (
 status_id INTEGER NOT NULL,
 ema_id INTEGER NOT NULL,
@@ -575,7 +576,6 @@ PRIMARY KEY(id),
 FOREIGN KEY (ema_id) REFERENCES ChemComp(ema_id)
 );
 -------------------------------------------------
-
 
 --------------Philippines--------------
 CREATE TABLE Philippines
