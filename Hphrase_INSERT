@@ -1,65 +1,65 @@
 INSERT INTO Hphrase (name, description, category_name, category_number, code)
 VALUES ('acute_toxicity_oral_1', 'Acute Toxicity (oral) Category 1 - H300', 1, 1, 'H300');
 
-INSERT INTO Hphrase (name, description, category_name, category_number, code)
+INSERT INTO Hphrase (name, description, hcategory_id, category_number, code)
 VALUES('acute_toxicity_oral_2', 'Acute Toxicity (oral) Category 2 - H300');
 
 
-acute_toxicity_oral_2	'Acute Toxicity (oral) Category 2 - H300',	1	2	H300
-acute_toxicity_oral_3	'Acute Toxicity (oral) Category 3 - H301',  1	3	H301
-acute_toxicity_oral_4	'Acute Toxicity (oral) Category 4 - H302',	1	4	H302
-acute_toxicity_oral_5	'Acute Toxicity (oral) Category 5 - H303',	1	5	H303
-acute_toxicity_dermal_1	'Acute Toxicity (dermal) Category 1 - 310',	2	1	H310
-acute_toxicity_dermal_2	'Acute Toxicity (dermal) Category 2 - 310',	2	2	H310
-acute_toxicity_dermal_3	'Acute Toxicity (dermal) Category 3 - 311',	2	3	H311
-acute_toxicity_dermal_4	'Acute Toxicity (dermal) Category 4 - 312',	2	4	H312
-acute_toxicity_dermal_5	'Acute Toxicity (dermal) Category 5 - 313',	2	5	H313
-acute_toxicity_inhalation_1	'Acute Toxicity (inhalation) Category 1 - 330',	3	1	H330
-acute_toxicity_inhalation_2	'Acute Toxicity (inhalation) Category 2 - 330',	3	2	H330
-acute_toxicity_inhalation_3	'Acute Toxicity (inhalation) Category 3 - 331',	3	3	H331
-acute_toxicity_inhalation_4	'Acute Toxicity (inhalation) Category 4 - 332',	3	4	H332
-acute_toxicity_inhalation_5	'Acute Toxicity (inhalation) Category 5 - 333',	3	5	H333
-skin_corrosion_irritation_1	'Skin Corrosion/Irritation Category 1 - H314',	4	1	H314
-skin_corrosion_irritation_2	'Skin Corrosion/Irritation Category 2 - H315',  4	2	H315
-skin_corrosion_irritation_3	'Skin Corrosion/Irritation Category 3 - H316',	4	3	H316
-serious_eye_damage_irritation_1	'Serious Eye Damage/Irritation Category 1 - H318',	5	1	H318
-serious_eye_damage_irritation_2	'Serious Eye Damage/Irritation Category 2 - H319',	5	2	H319
-serious_eye_damage_irritation_3	'Serious Eye Damage/Irritation Category 2A - H319',	5	2a	H319
-serious_eye_damage_irritation_4	'Serious Eye Damage/Irritation Category 2B - H320',	5	2b	H320
-respiratory_sensitization_1	'Respiratory Sensitization Category 1 - H334',	6	1	H334
-respiratory_sensitization_2	'Respiratory Sensitization Category 1A - H334',	6	1a	H334
-respiratory_sensitization_3	'Respiratory Sensitization Category 1B - H334',	6	1b	H334
-skin_sensitization_1	'Skin Sensitization Category 1 - H317',	7	1	H317
-skin_sensitization_2	'Skin Sensitization Category 1A - H317',	7	1a	H317
-skin_sensitization_3	'Skin Sensitization Category 1B - H317',	7	1b	H317
-germ_cell_mutagenicity_1	'Germ cell Mutagenicity Category 1 - H340',	8	1	H340
-germ_cell_mutagenicity_2	'Germ cell Mutagenicity Category 1A - H340',8	1a	H340
-germ_cell_mutagenicity_3	'Germ cell Mutagenicity Category 1B - H340',	8	1b	H340
-germ_cell_mutagenicity_4	'Germ cell Mutagenicity Category 2 - H341',	8	2	H341
-carcinogenicity_1	'Carcinogenicity Category 1 - H350',	9	1	H350
-carcinogenicity_2	'Carcinogenicity Category 1A - H350',	9	1a	H350
-carcinogenicity_3	'Carcinogenicity Category 1B - H350',	9	1b	H350
-carcinogenicity_4	'Carcinogenicity Category 2 - H351',	9	2	H351
-reproductive_toxicity_1	'Reproductive Toxicity Category 1 - H360',	10	1	H360
-reproductive_toxicity_2	'Reproductive Toxicity Category 1A - H360',	10	1a	H360
-reproductive_toxicity_3	'Reproductive Toxicity Category 1B - H360',	10	1b	H360
-reproductive_toxicity_4	'Reproductive Toxicity Category 2 - H361',	10	2	H361
-reproductive_toxicity_5	'Reproductive Toxicity Category (lactation) - H362',	10		H362
-stot_single_exposure_1	'STOT Single Exposure Category 1 - H370', 	11	1	H370
-stot_single_exposure_2	'STOT Single Exposure Category 2 - H371',	11	2	H371
-stot_single_exposure_3	'STOT Single Exposure Category 3 - H335',	11	3	H335
-stot_single_exposure_4	'STOT Single Exposure Category 3 - H336',	11	3	H336
-stot_repeated_exposure_1	'STOT Repeated Exposure Category 1 - H372',	12	1	H372
-stot_repeated_exposure_2	'STOT Repeated Exposure Category 2 - H373',	12	2	H373
-aspiration_hazard_1	'Aspiration hazard Category 1 - H304',	13	1	H304
-aspiration_hazard_2	'Aspiration hazard Category 2 - H305',	13	2	H305
-aquatic_acute_1	'Aquatic Acute Category 1 - H400',	14	1	H400
-aquatic_acute_2	'Aquatic Acute Category 2 - H401',	14	2	H401
-aquatic_acute_3	'Aquatic Acute Category 3 - H402',	14	3	H402
-aquatic_chronic_1	'Aquatic Chronic Category 1 - H410',	15	1	H410
-aquatic_chronic_2	'Aquatic Chronic Category 2 - H411',	15	2	H411
-aquatic_chronic_3	'Aquatic Chronic Category 3 - H412',	15	3	H412
-aquatic_chronic_4	'Aquatic Chronic Category 4 - H413',	15	4	H413
+'acute_toxicity_oral_2', 'Acute Toxicity (oral) Category 2 - H300',	1, '2', 'H300'
+'acute_toxicity_oral_3', 'Acute Toxicity (oral) Category 3 - H301', 1, '3', 'H301'
+'acute_toxicity_oral_4', 'Acute Toxicity (oral) Category 4 - H302',	1, '4', 'H302'
+'acute_toxicity_oral_5', 'Acute Toxicity (oral) Category 5 - H303',	1, '5', 'H303'
+'acute_toxicity_dermal_1', 'Acute Toxicity (dermal) Category 1 - 310',	2, '1', 'H310'
+'acute_toxicity_dermal_2', 'Acute Toxicity (dermal) Category 2 - 310',	2, '2', 'H310'
+'acute_toxicity_dermal_3', 'Acute Toxicity (dermal) Category 3 - 311',	2, '3', 'H311'
+'acute_toxicity_dermal_4', 'Acute Toxicity (dermal) Category 4 - 312',	2, '4', 'H312'
+'acute_toxicity_dermal_5', 'Acute Toxicity (dermal) Category 5 - 313',	2, '5', 'H313'
+'acute_toxicity_inhalation_1', 'Acute Toxicity (inhalation) Category 1 - 330',	3, '1', 'H330'
+'acute_toxicity_inhalation_2', 'Acute Toxicity (inhalation) Category 2 - 330',	3, '2', 'H330'
+'acute_toxicity_inhalation_3', 'Acute Toxicity (inhalation) Category 3 - 331',	3, '3', 'H331'
+'acute_toxicity_inhalation_4', 'Acute Toxicity (inhalation) Category 4 - 332',	3, '4', 'H332'
+'acute_toxicity_inhalation_5', 'Acute Toxicity (inhalation) Category 5 - 333',	3, '5', 'H333'
+'skin_corrosion_irritation_1', 'Skin Corrosion/Irritation Category 1 - H314',	4, '1', 'H314'
+'skin_corrosion_irritation_2', 'Skin Corrosion/Irritation Category 2 - H315',  4, '2', 'H315'
+'skin_corrosion_irritation_3', 'Skin Corrosion/Irritation Category 3 - H316',	4, '3', 'H316'
+'serious_eye_damage_irritation_1', 'Serious Eye Damage/Irritation Category 1 - H318',	5, '1', 'H318'
+'serious_eye_damage_irritation_2', 'Serious Eye Damage/Irritation Category 2 - H319',	5, '2', 'H319'
+'serious_eye_damage_irritation_3', 'Serious Eye Damage/Irritation Category 2A - H319',	5, '2a', 'H319'
+'serious_eye_damage_irritation_4', 'Serious Eye Damage/Irritation Category 2B - H320',	5, '2b', 'H320'
+'respiratory_sensitization_1', 'Respiratory Sensitization Category 1 - H334',	6, '1', 'H334'
+'respiratory_sensitization_2', 'Respiratory Sensitization Category 1A - H334',	6, '1a', 'H334'
+'respiratory_sensitization_3', 'Respiratory Sensitization Category 1B - H334',	6, '1b', 'H334'
+'skin_sensitization_1', 'Skin Sensitization Category 1 - H317',	7, '1', 'H317'
+'skin_sensitization_2', 'Skin Sensitization Category 1A - H317', 7, '1a', 'H317'
+'skin_sensitization_3', 'Skin Sensitization Category 1B - H317', 7, '1b', 'H317'
+'germ_cell_mutagenicity_1', 'Germ cell Mutagenicity Category 1 - H340', 8, '1', 'H340'
+'germ_cell_mutagenicity_2', 'Germ cell Mutagenicity Category 1A - H340', 8, '1a', 'H340'
+'germ_cell_mutagenicity_3', 'Germ cell Mutagenicity Category 1B - H340', 8, '1b', 'H340'
+'germ_cell_mutagenicity_4', 'Germ cell Mutagenicity Category 2 - H341',	8, '2', 'H341'
+'carcinogenicity_1', 'Carcinogenicity Category 1 - H350',	9, '1', 'H350'
+'carcinogenicity_2', 'Carcinogenicity Category 1A - H350',	9, '1a', 'H350'
+'carcinogenicity_3', 'Carcinogenicity Category 1B - H350',	9, '1b', 'H350'
+'carcinogenicity_4', 'Carcinogenicity Category 2 - H351',	9, '2', 'H351'
+'reproductive_toxicity_1', 'Reproductive Toxicity Category 1 - H360',	10, '1', 'H360'
+'reproductive_toxicity_2', 'Reproductive Toxicity Category 1A - H360',	10, '1a', 'H360'
+'reproductive_toxicity_3', 'Reproductive Toxicity Category 1B - H360',	10, '1b', 'H360'
+'reproductive_toxicity_4', 'Reproductive Toxicity Category 2 - H361',	10, '2', 'H361'
+'reproductive_toxicity_5', 'Reproductive Toxicity Category (lactation) - H362',	10, ' ', 'H362'
+'stot_single_exposure_1', 'STOT Single Exposure Category 1 - H370', 	11, '1', 'H370'
+'stot_single_exposure_2', 'STOT Single Exposure Category 2 - H371',	11, '2', 'H371'
+'stot_single_exposure_3', 'STOT Single Exposure Category 3 - H335',	11, '3', 'H335'
+'stot_single_exposure_4', 'STOT Single Exposure Category 3 - H336',	11, '3', 'H336'
+'stot_repeated_exposure_1', 'STOT Repeated Exposure Category 1 - H372',	12, '1', 'H372'
+'stot_repeated_exposure_2', 'STOT Repeated Exposure Category 2 - H373',	12, '2', 'H373'
+'aspiration_hazard_1', 'Aspiration hazard Category 1 - H304',	13, '1', 'H304'
+'aspiration_hazard_2', 'Aspiration hazard Category 2 - H305',	13, '2', 'H305'
+'aquatic_acute_1', 'Aquatic Acute Category 1 - H400', 14, '1', 'H400'
+'aquatic_acute_2', 'Aquatic Acute Category 2 - H401', 14, '2', 'H401'
+'aquatic_acute_3', 'Aquatic Acute Category 3 - H402', 14, '3', 'H402'
+'aquatic_chronic_1', 'Aquatic Chronic Category 1 - H410', 15, '1', 'H410'
+'aquatic_chronic_2', 'Aquatic Chronic Category 2 - H411', 15, '2', 'H411'
+'aquatic_chronic_3', 'Aquatic Chronic Category 3 - H412', 15, '3', 'H412'
+'aquatic_chronic_4', 'Aquatic Chronic Category 4 - H413', 15, '4', 'H413'
 
 
 

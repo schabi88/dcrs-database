@@ -151,13 +151,36 @@ PRIMARY KEY (id)
 CREATE TABLE HPhrase
 (
 id COUNTER NOT NULL,
+category_id INTEGER,
+property_id INTEGER,
 name CHAR(255) NOT NULL,
 code CHAR(10) NOT NULL,
+category_number CHAR(10),
 description LONGTEXT,
-category_name CHAR(255),
-category_number INTEGER,
-hazardou_property CHAR(10),
-PRIMARY KEY (id) 
+
+PRIMARY KEY (id),
+FOREIGN KEY (category_id) REFERENCES Hcategory(id),
+FOREIGN KEY (property_id) REFERENCES Hproperty(id)
+);
+------------------------------------------
+
+--------------Hcategory--------------
+CREATE TABLE Hcategory
+(
+id COUNTER NOT NULL,
+name CHAR(255) NOT NULL,
+
+PRIMARY KEY (id)
+);
+------------------------------------------
+
+--------------Hproperty--------------
+CREATE TABLE Hproperty
+(
+id COUNTER NOT NULL,
+name CHAR(255) NOT NULL,
+
+PRIMARY KEY (id)
 );
 ------------------------------------------
 
